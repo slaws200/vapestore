@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "jsx": "react-jsx",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "baseUrl": "./",
+      "paths": {
+        "@components/*": ["src/components/*"],
+        "@pages/*": ["src/pages/*"],
+        "@hooks/*": ["src/hooks/*"],
+        "@services/*": ["src/services/*"],
+        "@styles/*": ["src/styles/*"]
+      }
+    },
+    "include": ["src"],
+    "exclude": ["node_modules"]
+  }
+  
