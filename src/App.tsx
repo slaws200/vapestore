@@ -1,7 +1,13 @@
 import React from 'react';
+import { useEffect } from 'react';
 
 const App = () => {
-  return <div>Hello, Vapestore!</div>;
+  useEffect(() => {
+    const tg = window.Telegram.WebApp;
+    tg.ready();
+  }, []);
+
+  return <div>Welcome to the store!</div>;
 };
 
 export default App;
