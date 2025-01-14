@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
       <input
         type="text"
         className="search-bar"
-        placeholder="Search for products..."
+        placeholder="Найти товар..."
         onChange={handleSearch}
       />
     </header>

@@ -32,9 +32,13 @@ const App: React.FC = () => {
 
     return (
         <div className="app">
-        <Header onSearch={setSearchQuery} />
-        {activeTab === 'home' && <ProductList products={filteredProducts} />}
-        <BottomMenu activeTab={activeTab} onTabChange={setActiveTab} />
+            <div className="app-container">
+                <Header onSearch={setSearchQuery} />
+                    <div className="main-content">
+                        {activeTab === 'home' && <ProductList products={filteredProducts} />}
+                    </div>
+                <BottomMenu activeTab={activeTab} onTabChange={setActiveTab} />
+            </div>
         </div>
     );
 };
