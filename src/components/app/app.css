@@ -1,0 +1,9 @@
+/* src/styles/App.css */
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
+  }
+  
