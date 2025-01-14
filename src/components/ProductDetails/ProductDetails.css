@@ -1,0 +1,31 @@
+.product-details {
+  position: relative;
+    margin: 0 auto;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .product-details-image {
+    height: 120px;
+  }
+  
+  .product-details-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .product-details-price {
+    color: green;
+    font-size: 20px;
+  }
+  
+  .product-details-description {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .close {
+    position: absolute;
+    right: 10px;
+    height: 30px;
+    font-size: 30px;
+  }

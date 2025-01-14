@@ -1,5 +1,5 @@
-// src/components/ProductList.tsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProductList.css';
 
 interface Product {
@@ -14,10 +14,16 @@ interface ProductListProps {
 }
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="product-list">
       {products.map((product) => (
-        <div className="product-item" key={product.id}>
+        <div
+          className="product-item"
+          key={product.id}
+          onClick={() => navigate(`/vapestore/product/${product.id}`)}
+        >
           <img src={product.image} alt={product.name} className="product-image" />
           <div className="product-info">
             <span className="product-name">{product.name}</span>
