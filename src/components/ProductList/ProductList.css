@@ -13,11 +13,11 @@
     overflow: hidden;
     background-color: var(--tg-theme-secondary-bg-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    border: 1px solid var(--tg-theme-hint-color);
   }
   
   .product-image {
-    height: 120px;
+    height: 120px;    
   }
   
   .product-info {
@@ -25,17 +25,16 @@
     justify-content: space-between;
     padding: 8px;
     padding-top: 10px;
+    color: var(--tg-theme-button-text-color);
   }
   
   .product-name {
     font-size: 14px;
     font-weight: bold;
-    color: var(--tg-theme-text-color);
     margin-bottom: 4px;
   }
   
   .product-price {
     font-size: 14px;
-    color: var(--tg-theme-hint-color);
   }
   
