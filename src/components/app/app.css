@@ -12,12 +12,13 @@
   
   .bottom-menu {
     position: sticky;
-    bottom: 0;
-    background-color: var(--tg-theme-secondary-bg-color, #ffffff);
-    height: 60px;
+    background-color: var(--tg-theme-header-bg-color);
+    height: 50px;
     display: flex;
+    padding-bottom: 10px;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid var(--tg-theme-hint-color, #e0e0e0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
   }
-  

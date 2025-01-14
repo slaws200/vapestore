@@ -11,28 +11,42 @@ interface BottomMenuProps {
 }
 
 const BottomMenu: React.FC<BottomMenuProps> = ({ activeTab, onTabChange }) => {
+  let homeColor: string|undefined = 'black',
+      productsColor: string|undefined = 'black',
+      cartColor: string|undefined = 'black';
+
+  if (window.Telegram?.WebApp) {
+    const tg = window.Telegram.WebApp;
+    homeColor = tg.themeParams.text_color;
+    productsColor = tg.themeParams.text_color;
+    cartColor = tg.themeParams.text_color;
+    } 
+  const checkActive = (tabname: string, tab: string|undefined) :string => {
+    return `${activeTab === tabname ? '#0088cc' : tab}`
+  }
+
   return (
     <div className="bottom-menu">
       <button
         className={`menu-item ${activeTab === 'home' ? 'active' : ''}`}
         onClick={() => onTabChange('home')}
       >
-        <RiHomeLine size={24}/>
-        <span>Главная</span>
+        <RiHomeLine size={24} fill={checkActive('home', homeColor)}/>
+        <span style={{color: `${checkActive('home', homeColor)}`}}>Главная</span>
       </button>
       <button
         className={`menu-item ${activeTab === 'categories' ? 'active' : ''}`}
         onClick={() => onTabChange('categories')}
       >
-        <AiOutlineProduct  size={24} />
-        <span>Категории</span>
+        <AiOutlineProduct  size={24} fill={checkActive('categories', productsColor)}/>
+        <span style={{color: `${checkActive('categories', productsColor)}`}}>Категории</span>
       </button>
       <button
         className={`menu-item ${activeTab === 'cart' ? 'active' : ''}`}
         onClick={() => onTabChange('cart')}
       >
-        <LuShoppingCart size={24} />
-        <span>Корзина</span>
+        <LuShoppingCart size={24} color={checkActive('cart', cartColor)}/>
+        <span style={{color: `${checkActive('cart', cartColor)}`}}>Корзина</span>
       </button>
     </div>
   );
