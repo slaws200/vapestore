@@ -6,7 +6,8 @@
     border-radius: 10px;
   }
   
-  .search-bar {
+  .search-bar {    
+    background-color: var(--tg-theme-header-bg-color);
     width: 100%;
     padding: 8px 12px;
     border: none;

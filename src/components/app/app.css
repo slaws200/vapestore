@@ -13,9 +13,9 @@
   .bottom-menu {
     position: sticky;
     background-color: var(--tg-theme-header-bg-color);
-    height: 50px;
+    height: 60px;
     display: flex;
-    padding-bottom: 10px;
+    padding: 5px;
     justify-content: space-around;
     align-items: center;
     border-top-left-radius: 10px;
