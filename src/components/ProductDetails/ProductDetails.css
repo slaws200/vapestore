@@ -1,5 +1,5 @@
 .product-details {
-  position: relative;
+    position: relative;
     margin: 0 auto;
     text-align: center;
     margin: 20px;
@@ -11,23 +11,27 @@
   }
   
   .product-details-name {
+    color: var(--tg-theme-text-color);
     font-size: 24px;
     font-weight: bold;
   }
   
   .product-details-price {
     font-weight: bold;
-    color: green;
+    color: var(--tg-theme-accent-text-color);
     font-size: 20px;
   }
   
   .product-details-description {
     margin-top: 10px;
     font-size: 16px;
+    color: var(--tg-theme-text-color);
   }
   .close {
     position: absolute;
     right: 10px;
     height: 30px;
+    width: 30px;
     font-size: 30px;
+    color: var(--tg-theme-text-color);
   }

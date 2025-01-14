@@ -8,7 +8,7 @@
   
   .search-bar {    
     background-color: var(--tg-theme-header-bg-color);
-    width: 100%;
+    width: calc(100% - 24px);
     padding: 8px 12px;
     border: none;
     font-size: 14px;
