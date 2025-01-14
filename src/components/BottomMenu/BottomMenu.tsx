@@ -1,6 +1,8 @@
 // src/components/BottomMenu.tsx
 import React from 'react';
-import { AiOutlineHome, AiOutlineAppstore, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineProduct  } from 'react-icons/ai';
+import { RiHomeLine } from "react-icons/ri";
+import { LuShoppingCart } from "react-icons/lu";
 import './BottomMenu.css';
 
 interface BottomMenuProps {
@@ -15,21 +17,21 @@ const BottomMenu: React.FC<BottomMenuProps> = ({ activeTab, onTabChange }) => {
         className={`menu-item ${activeTab === 'home' ? 'active' : ''}`}
         onClick={() => onTabChange('home')}
       >
-        <AiOutlineHome size={24} />
+        <RiHomeLine size={24}/>
         <span>Главная</span>
       </button>
       <button
         className={`menu-item ${activeTab === 'categories' ? 'active' : ''}`}
         onClick={() => onTabChange('categories')}
       >
-        <AiOutlineAppstore size={24} />
+        <AiOutlineProduct  size={24} />
         <span>Категории</span>
       </button>
       <button
         className={`menu-item ${activeTab === 'cart' ? 'active' : ''}`}
         onClick={() => onTabChange('cart')}
       >
-        <AiOutlineShoppingCart size={24} />
+        <LuShoppingCart size={24} />
         <span>Корзина</span>
       </button>
     </div>

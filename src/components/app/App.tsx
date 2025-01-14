@@ -8,10 +8,13 @@ import BottomMenu from '@components/BottomMenu/BottomMenu';
 import './app.css';
 
 const mockProducts = [
-  { id: '1', name: 'Product 1', image: '/images/product1.jpg', price: '$10' },
-  { id: '2', name: 'Product 2', image: '/images/product2.jpg', price: '$20' },
-  { id: '3', name: 'Product 3', image: '/images/product3.jpg', price: '$15' },
-  { id: '4', name: 'Product 4', image: '/images/product4.jpg', price: '$25' },
+  { id: '1', name: 'Angry Wape', image: 'src/resources/img/product1.jpeg', price: '$10' },
+  { id: '2', name: 'Jewel Juice', image: 'src/resources/img/product2.png', price: '$20' },
+  { id: '3', name: 'Island Man', image: 'src/resources/img/product3.jpg', price: '$15' },
+  { id: '4', name: 'Pawn Juice', image: 'src/resources/img/product4.jpg', price: '$25' },
+  { id: '5', name: 'Pawn Juice', image: 'src/resources/img/product4.jpg', price: '$25' },  
+  { id: '6', name: 'Pawn Juice', image: 'src/resources/img/product4.jpg', price: '$25' },
+  { id: '7', name: 'Pawn Juice', image: 'src/resources/img/product4.jpg', price: '$25' },
 ];
 
 const App: React.FC = () => {
