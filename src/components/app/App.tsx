@@ -47,7 +47,7 @@ const App: React.FC = () => {
                     {activeTab === 'home' && <Header onSearch={setSearchQuery} />}
                                                         
                     <div className="main-content">
-                    {activeTab === 'home' && <div className="app-title">Все товары</div>}
+                    {/* {activeTab === 'home' && <div className="app-title">Все товары</div>} */}
                         <Routes>
                             <Route
                                 path="/vapestore"
