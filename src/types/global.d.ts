@@ -15,6 +15,7 @@ declare global {
           link_color?: string;
           button_color?: string;
           button_text_color?: string;
+          accent_text_color?: string;
         };
         colorScheme: 'light' | 'dark';
         viewportHeight: number;

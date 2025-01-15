@@ -13,16 +13,18 @@ interface BottomMenuProps {
 const BottomMenu: React.FC<BottomMenuProps> = ({ activeTab, onTabChange }) => {
   let homeColor: string|undefined = 'black',
       productsColor: string|undefined = 'black',
-      cartColor: string|undefined = 'black';
+      cartColor: string|undefined = 'black',
+      accentTextColor: string|undefined = '#0088cc';
 
   if (window.Telegram?.WebApp) {
     const tg = window.Telegram.WebApp;
     homeColor = tg.themeParams.text_color;
     productsColor = tg.themeParams.text_color;
     cartColor = tg.themeParams.text_color;
+    accentTextColor = tg.themeParams.accent_text_color;
     } 
-  const checkActive = (tabname: string, tab: string|undefined) :string => {
-    return `${activeTab === tabname ? '#0088cc' : tab}`
+  const checkActive = (tabname: string, tabColor: string|undefined) :string => {
+    return `${activeTab === tabname ? accentTextColor : tabColor}`
   }
 
   return (
