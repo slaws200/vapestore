@@ -3,7 +3,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    padding: 12px;
+    padding: 16px;
+    background-color: var(--tg-theme-section-bg-color);
+    border-radius: 10px;
   }
   
   .product-item {

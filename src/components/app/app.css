@@ -1,11 +1,19 @@
+.app{
+  background-color: var(--tg-theme-secondary-bg-color);
+}
+
 .app-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
-  .main-content {
-    flex: 1;
-    overflow-y: auto;
-    padding: 16px;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+.app-title {
+  color: var(--tg-theme-section-header-text-color);
+  padding: 10px;
+}
