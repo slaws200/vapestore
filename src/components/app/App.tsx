@@ -13,9 +13,15 @@ const mockProducts = [
   { id: '2', name: 'Jewel Juice', image: 'img/product2.png', price: '$20', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
   { id: '3', name: 'Island Man', image: 'img/product3.jpg', price: '$155', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
   { id: '4', name: 'Pawn Juice', image: 'img/product4.jpg', price: '$65', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-  { id: '5', name: 'Pawn Juice', image: 'img/product4.jpg', price: '$525', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },  
-  { id: '6', name: 'Pawn Juice', image: 'img/product4.jpg', price: '$215', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-  { id: '7', name: 'Pawn Juice', image: 'img/product4.jpg', price: '$80', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
+  { id: '5', name: 'Own Juice', image: 'img/product4.jpg', price: '$525', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },  
+  { id: '6', name: 'Pawn Puice', image: 'img/product2.png', price: '$215', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
+  { id: '7', name: 'Main Kaye', image: 'img/product4.jpg', price: '$80', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
+  { id: '8', name: 'Angry Wape', image: 'img/product1.jpeg', price: '$100', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
+  { id: '9', name: 'Jewel Juice', image: 'img/product2.png', price: '$20', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
+  { id: '10', name: 'Island Man', image: 'img/product3.jpg', price: '$155', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
+  { id: '11', name: 'Roiwn Juice', image: 'img/product4.jpg', price: '$65', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
+  { id: '12', name: 'Old Morce', image: 'img/product3.jpg', price: '$525', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },  
+  { id: '13', name: 'Pawn Juice', image: 'img/product4.jpg', price: '$215', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },  
 ];
 
 const App: React.FC = () => {
@@ -38,7 +44,7 @@ const App: React.FC = () => {
         <Router>
             <div className="app">
                 <div className="app-container">
-                    <Header onSearch={setSearchQuery} />
+                    {activeTab === 'home' && <Header onSearch={setSearchQuery} />}                    
                     <div className="main-content">
                         <Routes>
                             <Route

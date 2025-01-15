@@ -27,7 +27,10 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
           <img src={product.image} alt={product.name} className="product-image" />
           <div className="product-info">
             <span className="product-name">{product.name}</span>
-            <span className="product-price">{product.price}</span>
+              <div className="product-name-price-wrapper">
+                <span>Цена: </span>
+                <span className="product-price">{product.price}</span>
+              </div>
           </div>
         </div>
       ))}
