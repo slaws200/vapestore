@@ -5,6 +5,7 @@
     gap: 12px;
     padding: 16px;
     border-radius: 10px;
+    background-color: var(--tg-theme-secondary-bg-color);
   }
   
   .product-item {
@@ -43,5 +44,6 @@
   
   .product-price {
     font-size: 12px;
-    color: var(--tg-theme-hint-color);
+    font-weight: bold;
+    color: var(--tg-theme-accent-text-color);
   }

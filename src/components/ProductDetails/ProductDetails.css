@@ -1,6 +1,5 @@
 .product-details {
     position: relative;
-    margin: 0 auto;
     text-align: center;
     margin: 20px;
   }
@@ -18,7 +17,7 @@
   
   .product-details-price {
     font-weight: bold;
-    color: var(--tg-theme-hint-color);
+    color: var(--tg-theme-accent-text-color);
     font-size: 20px;
   }
   
@@ -34,5 +33,49 @@
     height: 30px;
     width: 30px;
     font-size: 30px;
+    font-weight: bold;
     color: var(--tg-theme-text-color);
+  }
+  .product-buttons-wrapper {
+    display: flex;
+    width: 110px;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .product-dec-button, .product-inc-button {
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: bold;
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+  }
+  .product-quantity {
+    text-align: center;
+    height: 30px;
+    width: 40px;
+    background-color: var(--tg-theme-secondary-bg-color);
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 10px;
+    color:var(--tg-theme-text-color);
+  }
+  .product-add-to-cart {
+    margin: 0 auto;
+    position: sticky;
+    bottom: 0px;
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border-radius: 30px;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 40px;
+    outline: none;
+    border: none;
   }

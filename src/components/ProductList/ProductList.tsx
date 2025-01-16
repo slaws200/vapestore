@@ -1,19 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Products } from '@interfaces/Products';
 import './ProductList.css';
 
-interface Product {
-  id: string;
-  name: string;
-  image: string;
-  price: string;
-}
 
-interface ProductListProps {
-  products: Product[];
-}
-
-const ProductList: React.FC<ProductListProps> = ({ products }) => {
+const ProductList: React.FC<Products> = ({ products }) => {
   const navigate = useNavigate();
 
   return (
