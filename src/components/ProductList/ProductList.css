@@ -12,7 +12,7 @@
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
-    background-color: var(--tg-theme-header-bg-color);
+    background-color: var(--tg-theme-section-bg-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
@@ -43,5 +43,5 @@
   
   .product-price {
     font-size: 12px;
-    color: var(--tg-theme-accent-text-color);
+    color: var(--tg-theme-hint-color);
   }
