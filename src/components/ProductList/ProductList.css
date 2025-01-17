@@ -5,7 +5,7 @@
     gap: 12px;
     padding: 16px;
     border-radius: 10px;
-    background-color: var(--tg-theme-secondary-bg-color);
+    /* background-color: var(--tg-theme-secondary-bg-color); */
   }
   
   .product-item {

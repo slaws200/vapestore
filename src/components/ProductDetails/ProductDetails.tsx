@@ -31,11 +31,11 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
       <div className="product-buttons-wrapper">
         <button className="product-dec-button" onClick={() => {
           onQuantityChange(baseQuantity === 1 ? 1 : baseQuantity - 1)
-        }}>-</button>
+        }}>&#8722;</button>
         <div className="product-quantity">{baseQuantity}</div>
         <button className="product-inc-button" onClick={() => {
           onQuantityChange(baseQuantity === 10 ? 10 : baseQuantity + 1)
-        }}>+</button>
+        }}>&#43;</button>
       </div>
       <p className="product-details-description">{product.description}</p>
       <button className="product-add-to-cart">Добавить в корзину</button>
