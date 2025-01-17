@@ -19,7 +19,9 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
         placeholder="Найти товар..."
         onChange={handleSearch}
       />
-      <span className='clear-text'>&#215;</span>
+      <span className='clear-text' onClick={() => {
+        onSearch('');
+      }}>&#215;</span>
     </header>
   );
 };
