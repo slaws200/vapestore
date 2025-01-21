@@ -29,17 +29,17 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
       <h1 className="product-details-name">{product.name}</h1>
       <p className="product-details-price">Цена: <span>{product.price}</span></p>
       <div className="product-buttons-wrapper">
-        <button className="product-dec-button" onClick={() => {
+        <div className="product-dec-button" onClick={() => {
           onQuantityChange(baseQuantity === 1 ? 1 : baseQuantity - 1)
         }}>
           <span>&#8722;</span>
-        </button>
+        </div>
         <div className="product-quantity">{baseQuantity}</div>
-        <button className="product-inc-button" onClick={() => {
+        <div className="product-inc-button" onClick={() => {
           onQuantityChange(baseQuantity === 10 ? 10 : baseQuantity + 1)
         }}>
           <span>&#43;</span>
-        </button>
+        </div>
       </div>
       <p className="product-details-description">{product.description}</p>
       <button className="product-add-to-cart">Добавить в корзину</button>
