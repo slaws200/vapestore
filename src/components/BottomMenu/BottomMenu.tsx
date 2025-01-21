@@ -1,8 +1,8 @@
 // src/components/BottomMenu.tsx
 import React from 'react';
-import { AiOutlineProduct  } from 'react-icons/ai';
-import { RiHomeLine } from "react-icons/ri";
-import { LuShoppingCart } from "react-icons/lu";
+import { AiFillProduct } from "react-icons/ai";
+import { TiHome } from "react-icons/ti";
+import { HiShoppingCart } from "react-icons/hi";
 import './BottomMenu.css';
 
 interface BottomMenuProps {
@@ -33,21 +33,21 @@ const BottomMenu: React.FC<BottomMenuProps> = ({ activeTab, onTabChange }) => {
         className={`menu-item ${activeTab === 'home' ? 'active' : ''}`}
         onClick={() => onTabChange('home')}
       >
-        <RiHomeLine size={24} fill={checkActive('home', homeColor)}/>
+        <TiHome size={24} fill={checkActive('home', homeColor)}/>
         <span style={{color: `${checkActive('home', homeColor)}`}}>Главная</span>
       </button>
       <button
         className={`menu-item ${activeTab === 'categories' ? 'active' : ''}`}
         onClick={() => onTabChange('categories')}
       >
-        <AiOutlineProduct  size={24} fill={checkActive('categories', productsColor)}/>
+        <AiFillProduct  size={24} fill={checkActive('categories', productsColor)}/>
         <span style={{color: `${checkActive('categories', productsColor)}`}}>Категории</span>
       </button>
       <button
         className={`menu-item ${activeTab === 'cart' ? 'active' : ''}`}
         onClick={() => onTabChange('cart')}
       >
-        <LuShoppingCart size={24} color={checkActive('cart', cartColor)}/>
+        <HiShoppingCart size={24} color={checkActive('cart', cartColor)}/>
         <span style={{color: `${checkActive('cart', cartColor)}`}}>Корзина</span>
       </button>
     </div>
