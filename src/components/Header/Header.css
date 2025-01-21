@@ -14,6 +14,9 @@
     justify-content: space-around;
     align-items: center;
   }
+  ::placeholder {
+    color: var(--tg-theme-hint-color);
+  }
   
   .search-bar {    
     background-color: var(--tg-theme-header-bg-color);
@@ -26,10 +29,15 @@
     color: var(--tg-theme-text-color);
   }
   .clear-text {
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
     height: 100%;
     width: 20px;
     color: var(--tg-theme-hint-color);
-    text-align: center;
-    font-size: 40px;
-    line-height: 40px;
-  }
+    font-size: 35px;
+    box-sizing: border-box; /* Гарантируем корректное вычисление размеров */
+    border: none; /* Убираем возможные рамки */
+    background: transparent; /* Убедимся, что фон прозрачный */
+    cursor: pointer;
+}

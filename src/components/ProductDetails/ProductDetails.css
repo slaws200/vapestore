@@ -41,6 +41,7 @@
     font-size: 30px;
     font-weight: bold;
     color: var(--tg-theme-text-color);
+    cursor: pointer;
   }
   .product-buttons-wrapper {
     display: flex;
@@ -60,6 +61,7 @@
     border-radius: 10px;
     outline: none;
     border: none;
+    cursor: pointer;
   }
   .product-quantity {
     height: 30px;
@@ -85,4 +87,5 @@
     line-height: 40px;
     outline: none;
     border: none;
+    cursor: pointer;
   }
