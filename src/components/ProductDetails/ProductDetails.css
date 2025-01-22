@@ -5,7 +5,8 @@
   }
   
   .product-details-image {
-    height: 120px;
+    margin: 0 auto;
+    height: 140px;
     border-radius: 10px;
   }
   
@@ -31,6 +32,7 @@
     margin-top: 10px;
     font-size: 16px;
     color: var(--tg-theme-text-color);
+    white-space: pre-wrap;
   }
   .close {
     position: absolute;
@@ -76,8 +78,9 @@
   }
   .product-add-to-cart {
     margin: 0 auto;
-    position: sticky;
-    bottom: 0px;
+    margin-top: 20px;
+    /* position: sticky;
+    bottom: 0px; */
     background-color: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     border-radius: 30px;

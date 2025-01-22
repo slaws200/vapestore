@@ -16,10 +16,13 @@
     background-color: var(--tg-theme-section-bg-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    justify-content: space-between;
   }
   
   .product-image {
-    height: 80px;    
+    margin: 0 auto;
+    height: 80px;
+    border-radius: 5px;
   }
   
   .product-info {

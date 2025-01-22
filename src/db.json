@@ -1,0 +1,111 @@
+{
+    "cartriges": [
+      {
+        "id": "1",
+        "name": "Картридж Minican",
+        "price": 85,
+        "description": "Совместимые продукты: Minican 2, Minican+,  Minican, Minican 3, Minican 3 Pro, Minican 4",
+        "image": "img/minicancartrige.webp",
+        "stock": 50
+      },
+      {
+        "id": "2",
+        "name": "Картридж ELFX",
+        "price": 85,
+        "description": "Совместимость с под-системами:\n- Elf Bar ELFX\n- Elf Bar ELFX PRO",
+        "image": "img/elfx.webp",
+        "stock": 30
+      }
+    ],
+    "elfbarelfx": [
+      {
+        "id": "3",
+        "name": "Elfbar ELFX Purple",
+        "price": 350,
+        "description": "Комплектация:\n В комплект Elf Bar Elfx входят все необходимые элементы для начала использования: \n\n- Аккумуляторный блок\n- Картридж 0,6 Ом\n- Картридж 0,8 Ом\n- Кабель USB Type-C\n- Руководство по эксплуатации\n\nТехнические характеристики: Elf Bar Elfx обладает впечатляющими техническими характеристиками, которые удовлетворят даже привередливых пользователей: \n\n- Размер: 104,5 х 18,9 х 11,4 мм\n- Мощность: 5-30 Вт\n- Объем картриджа: 2 мл\n- Сопротивление: 0,4 – 1,2 Ом\n- Аккумулятор: 1000 мАч",
+        "image": "img/ElfBar_ELFX_Purple.webp",
+        "stock": 100
+      },
+      {
+        "id": "4",
+        "name": "Elfbar ELFX Blue",
+        "price": 350,
+        "description": "Комплектация:\n В комплект Elf Bar Elfx входят все необходимые элементы для начала использования: \n\n- Аккумуляторный блок\n- Картридж 0,6 Ом\n- Картридж 0,8 Ом\n- Кабель USB Type-C\n- Руководство по эксплуатации\n\nТехнические характеристики: Elf Bar Elfx обладает впечатляющими техническими характеристиками, которые удовлетворят даже привередливых пользователей: \n\n- Размер: 104,5 х 18,9 х 11,4 мм\n- Мощность: 5-30 Вт\n- Объем картриджа: 2 мл\n- Сопротивление: 0,4 – 1,2 Ом\n- Аккумулятор: 1000 мАч",
+        "image": "img/ElfBar_ELFX_Blue.webp",
+        "stock": 80
+      }
+    ],
+    "vozol": [
+      {
+        "id": "1",
+        "name": "Vozol Lite",
+        "price": 9.99,
+        "description": "Compact and portable with great flavor options.",
+        "image": "vozol-lite.jpg",
+        "stock": 20
+      },
+      {
+        "id": "2",
+        "name": "Vozol Pro",
+        "price": 19.99,
+        "description": "Advanced device with customizable settings.",
+        "image": "vozol-pro.jpg",
+        "stock": 10
+      }
+    ],
+    "octobar": [
+      {
+        "id": "1",
+        "name": "Octobar Mini",
+        "price": 8.99,
+        "description": "Mini disposable vape with unique flavors.",
+        "image": "octobar-mini.jpg",
+        "stock": 60
+      },
+      {
+        "id": "2",
+        "name": "Octobar Max",
+        "price": 16.99,
+        "description": "Large capacity disposable vape with premium flavors.",
+        "image": "octobar-max.jpg",
+        "stock": 40
+      }
+    ],
+    "chaser": [
+      {
+        "id": "1",
+        "name": "Chaser Cloud",
+        "price": 13.99,
+        "description": "High vapor output for cloud chasing enthusiasts.",
+        "image": "chaser-cloud.jpg",
+        "stock": 25
+      },
+      {
+        "id": "2",
+        "name": "Chaser Smooth",
+        "price": 11.99,
+        "description": "Smooth vaping experience with a variety of flavors.",
+        "image": "chaser-smooth.jpg",
+        "stock": 35
+      }
+    ],
+    "elfliq": [
+      {
+        "id": "1",
+        "name": "Elfliq Original",
+        "price": 6.99,
+        "description": "Premium liquid with original flavors.",
+        "image": "elfliq-original.jpg",
+        "stock": 70
+      },
+      {
+        "id": "2",
+        "name": "Elfliq Tropical",
+        "price": 7.99,
+        "description": "Tropical flavor for a refreshing experience.",
+        "image": "elfliq-tropical.jpg",
+        "stock": 50
+      }
+    ]
+}
+  

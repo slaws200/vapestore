@@ -20,7 +20,7 @@ const ProductList: React.FC<Products> = ({ products }) => {
             <span className="product-name">{product.name}</span>
               <div className="product-name-price-wrapper">
                 <span>Цена: </span>
-                <span className="product-price">{product.price}</span>
+                <span className="product-price">{product.price} ₽</span>
               </div>
           </div>
         </div>

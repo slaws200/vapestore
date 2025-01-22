@@ -27,7 +27,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
         }}>&#215;</div>
       <img src={'/vapestore/' + product.image} alt={product.name} className="product-details-image" />
       <h1 className="product-details-name">{product.name}</h1>
-      <p className="product-details-price">Цена: <span>{product.price}</span></p>
+      <p className="product-details-price">Цена: <span>{product.price} ₽ / {(Math.round((product.price * 1.05)/10)*10).toFixed(0)} lei</span></p>
       <div className="product-buttons-wrapper">
         <div className="product-dec-button" onClick={() => {
           onQuantityChange(baseQuantity === 1 ? 1 : baseQuantity - 1)
@@ -41,7 +41,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
           <span>&#43;</span>
         </div>
       </div>
-      <p className="product-details-description">{product.description}</p>
+      <div className="product-details-description">{product.description}</div>
       <button className="product-add-to-cart">Добавить в корзину</button>
     </div>
   );
