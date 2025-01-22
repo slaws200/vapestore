@@ -1,6 +1,5 @@
 .product-details {
     position: relative;
-    margin: 0 auto;
     text-align: center;
     margin: 20px;
   }
@@ -18,6 +17,12 @@
   
   .product-details-price {
     font-weight: bold;
+    color: var(--tg-theme-text-color);
+    font-size: 20px;
+  }
+
+  .product-details-price span {
+    font-weight: bold;
     color: var(--tg-theme-accent-text-color);
     font-size: 20px;
   }
@@ -34,5 +39,53 @@
     height: 30px;
     width: 30px;
     font-size: 30px;
+    font-weight: bold;
     color: var(--tg-theme-text-color);
+    cursor: pointer;
+  }
+  .product-buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .product-dec-button, .product-inc-button {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .product-quantity {
+    height: 30px;
+    width: 40px;
+    text-align: center;
+    margin: 0px 5px;
+    background-color: var(--tg-theme-secondary-bg-color);
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 5px;
+    color:var(--tg-theme-text-color);
+  }
+  .product-add-to-cart {
+    margin: 0 auto;
+    position: sticky;
+    bottom: 0px;
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border-radius: 30px;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
   }

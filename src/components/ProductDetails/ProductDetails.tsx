@@ -1,20 +1,14 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Products } from '@interfaces/Products';
 import './ProductDetails.css';
 
-interface Product {
-  id: string;
-  name: string;
-  image: string;
-  price: string;
-  description: string;
+interface ProductDetailsProps extends Products{
+  onQuantityChange: (query: number) => void;
+  baseQuantity: number;
 }
 
-interface ProductDetailsProps {
-  products: Product[];
-}
-
-const ProductDetails: React.FC<ProductDetailsProps> = ({ products }) => {
+const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity, onQuantityChange }) => {
   const { id } = useParams<{ id: string }>();
   
   const navigate = useNavigate();
@@ -27,11 +21,28 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products }) => {
 
   return (
     <div className="product-details">
-      <div className="close" onClick={() => navigate("/vapestore/")}>&#10008;</div>
+      <div className="close" onClick={() => {
+        navigate("/vapestore/");
+        onQuantityChange(1);
+        }}>&#215;</div>
       <img src={'/vapestore/' + product.image} alt={product.name} className="product-details-image" />
       <h1 className="product-details-name">{product.name}</h1>
-      <p className="product-details-price">Цена: {product.price}</p>
+      <p className="product-details-price">Цена: <span>{product.price}</span></p>
+      <div className="product-buttons-wrapper">
+        <div className="product-dec-button" onClick={() => {
+          onQuantityChange(baseQuantity === 1 ? 1 : baseQuantity - 1)
+        }}>
+          <span>&#8722;</span>
+        </div>
+        <div className="product-quantity">{baseQuantity}</div>
+        <div className="product-inc-button" onClick={() => {
+          onQuantityChange(baseQuantity === 10 ? 10 : baseQuantity + 1)
+        }}>
+          <span>&#43;</span>
+        </div>
+      </div>
       <p className="product-details-description">{product.description}</p>
+      <button className="product-add-to-cart">Добавить в корзину</button>
     </div>
   );
 };

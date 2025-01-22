@@ -9,7 +9,7 @@ import ProductDetails from '@components/ProductDetails/ProductDetails';
 import './app.css';
 
 const mockProducts = [
-  { id: '1', name: 'Angry Wape', image: 'img/product1.jpeg', price: '$100', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
+  { id: '1', name: 'Angry Wape', image: 'img/product1.jpeg', price: '$100', description: 'Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
   { id: '2', name: 'Jewel Juice', image: 'img/product2.png', price: '$20', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
   { id: '3', name: 'Island Man', image: 'img/product3.jpg', price: '$155', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
   { id: '4', name: 'Pawn Juice', image: 'img/product4.jpg', price: '$65', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
@@ -35,6 +35,7 @@ const App: React.FC = () => {
     }, []);
     const [activeTab, setActiveTab] = useState('home');
     const [searchQuery, setSearchQuery] = useState('');
+    const [quantity, setQuantity] = useState(1);
 
     const filteredProducts = mockProducts.filter((product) =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -44,10 +45,8 @@ const App: React.FC = () => {
         <Router>
             <div className="app">
                 <div className="app-container">
-                    {activeTab === 'home' && <Header onSearch={setSearchQuery} />}
-                                                        
+                    {activeTab === 'home' && <Header onSearch={setSearchQuery} />}                                                    
                     <div className="main-content">
-                    {/* {activeTab === 'home' && <div className="app-title">Все товары</div>} */}
                         <Routes>
                             <Route
                                 path="/vapestore"
@@ -55,7 +54,7 @@ const App: React.FC = () => {
                             />
                             <Route
                                 path="/vapestore/product/:id"
-                                element={<ProductDetails products={mockProducts} />}
+                                element={<ProductDetails baseQuantity={quantity} onQuantityChange={setQuantity} products={mockProducts} />}
                             />
                         </Routes>
                     </div>

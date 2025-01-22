@@ -5,6 +5,7 @@
     gap: 12px;
     padding: 16px;
     border-radius: 10px;
+    /* background-color: var(--tg-theme-secondary-bg-color); */
   }
   
   .product-item {
@@ -12,8 +13,9 @@
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
-    background-color: var(--tg-theme-header-bg-color);
+    background-color: var(--tg-theme-section-bg-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
   
   .product-image {
@@ -43,5 +45,6 @@
   
   .product-price {
     font-size: 12px;
+    font-weight: bold;
     color: var(--tg-theme-accent-text-color);
   }

@@ -1,18 +1,43 @@
 /* src/styles/Header.css */
 .header {
-    padding: 12px;
-    background-color: var(--tg-theme-section-bg-color);
+    position: relative;
+    z-index: 2;
+    padding: 0px 12px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: var(--tg-theme-header-bg-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    height: 40px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  ::placeholder {
+    color: var(--tg-theme-hint-color);
   }
   
   .search-bar {    
-    background-color: var(--tg-theme-section-bg-color);
+    background-color: var(--tg-theme-header-bg-color);
+    height: 40px;
     width: calc(100% - 24px);
-    padding: 8px 12px;
+    padding: 0px 12px;
     border: none;
     font-size: 14px;
     outline: none;
     color: var(--tg-theme-text-color);
   }
-  
+  .clear-text {
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+    height: 100%;
+    width: 20px;
+    color: var(--tg-theme-hint-color);
+    font-size: 35px;
+    box-sizing: border-box; /* Гарантируем корректное вычисление размеров */
+    border: none; /* Убираем возможные рамки */
+    background: transparent; /* Убедимся, что фон прозрачный */
+    cursor: pointer;
+}
