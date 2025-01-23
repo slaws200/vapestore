@@ -1,9 +1,9 @@
 .app {
   position: relative;
-  top: calc(var(--tg-safe-area-inset-top) + 30px);
-  bottom: var(--tg-safe-area-inset-bottom);
-  right: var(--tg-safe-area-inset-right);
-  left: var(--tg-safe-area-inset-left);
+  top: var(--tg-content-safe-area-inset-top);
+  bottom: var(--tg-content-safe-area-inset-bottom);
+  right: var(--tg-content-safe-area-inset-right);
+  left: var(--tg-content-safe-area-inset-left);
 }
 .app-container {
   display: flex;
