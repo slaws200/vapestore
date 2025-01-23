@@ -14,6 +14,7 @@ import './app.css';
 const mockProducts = (database.elfbarelfx).concat(database.cartriges);
 
 const App: React.FC = () => {
+
     useEffect(() => {
         if (window.Telegram?.WebApp) {
             const tg = window.Telegram.WebApp;
@@ -25,6 +26,7 @@ const App: React.FC = () => {
             console.log("Запущено вне Telegram");
         }
     }, []);
+    
     const [activeTab, setActiveTab] = useState('home');
     const [searchQuery, setSearchQuery] = useState('');
     const [quantity, setQuantity] = useState(1);
