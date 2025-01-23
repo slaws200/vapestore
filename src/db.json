@@ -35,77 +35,9 @@
         "stock": 80
       }
     ],
-    "vozol": [
-      {
-        "id": "1",
-        "name": "Vozol Lite",
-        "price": 9.99,
-        "description": "Compact and portable with great flavor options.",
-        "image": "vozol-lite.jpg",
-        "stock": 20
-      },
-      {
-        "id": "2",
-        "name": "Vozol Pro",
-        "price": 19.99,
-        "description": "Advanced device with customizable settings.",
-        "image": "vozol-pro.jpg",
-        "stock": 10
-      }
-    ],
-    "octobar": [
-      {
-        "id": "1",
-        "name": "Octobar Mini",
-        "price": 8.99,
-        "description": "Mini disposable vape with unique flavors.",
-        "image": "octobar-mini.jpg",
-        "stock": 60
-      },
-      {
-        "id": "2",
-        "name": "Octobar Max",
-        "price": 16.99,
-        "description": "Large capacity disposable vape with premium flavors.",
-        "image": "octobar-max.jpg",
-        "stock": 40
-      }
-    ],
-    "chaser": [
-      {
-        "id": "1",
-        "name": "Chaser Cloud",
-        "price": 13.99,
-        "description": "High vapor output for cloud chasing enthusiasts.",
-        "image": "chaser-cloud.jpg",
-        "stock": 25
-      },
-      {
-        "id": "2",
-        "name": "Chaser Smooth",
-        "price": 11.99,
-        "description": "Smooth vaping experience with a variety of flavors.",
-        "image": "chaser-smooth.jpg",
-        "stock": 35
-      }
-    ],
-    "elfliq": [
-      {
-        "id": "1",
-        "name": "Elfliq Original",
-        "price": 6.99,
-        "description": "Premium liquid with original flavors.",
-        "image": "elfliq-original.jpg",
-        "stock": 70
-      },
-      {
-        "id": "2",
-        "name": "Elfliq Tropical",
-        "price": 7.99,
-        "description": "Tropical flavor for a refreshing experience.",
-        "image": "elfliq-tropical.jpg",
-        "stock": 50
-      }
-    ]
+    "vozol": [],
+    "octobar": [],
+    "chaser": [],
+    "elfliq": []
 }
   

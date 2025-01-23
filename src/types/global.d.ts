@@ -22,7 +22,10 @@ declare global {
         isExpanded: boolean;
         ready: () => void; // Добавляем метод ready
         expand: () => void;
-        close: () => void;
+        close: () => void;        
+        requestFullscreen: () => void;
+        disableVerticalSwipes: () => void;
+        lockOrientation: () => void;
         sendData: (data: string) => void;
         onEvent: (eventType: string, callback: () => void) => void;
         offEvent: (eventType: string, callback: () => void) => void;
@@ -30,6 +33,13 @@ declare global {
           impactOccurred: (style: 'light' | 'medium' | 'heavy') => void;
           notificationOccurred: (type: 'error' | 'success' | 'warning') => void;
           selectionChanged: () => void;
+        };
+        BackButton: {
+          isVisible: boolean;
+          show: () => void;
+          hide: () => void;
+          onClick: (callback: () => void) => void;
+          offClick: (callback: () => void) => void;
         };
       };
     };

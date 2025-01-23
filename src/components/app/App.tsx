@@ -11,22 +11,6 @@ import database from '../../db.json';
 
 import './app.css';
 
-// const mockProducts = [
-//   { id: '1', name: 'Angry Wape', image: 'img/product1.jpeg', price: '$100', description: 'Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '2', name: 'Jewel Juice', image: 'img/product2.png', price: '$20', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '3', name: 'Island Man', image: 'img/product3.jpg', price: '$155', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '4', name: 'Pawn Juice', image: 'img/product4.jpg', price: '$65', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '5', name: 'Own Juice', image: 'img/product4.jpg', price: '$525', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },  
-//   { id: '6', name: 'Pawn Puice', image: 'img/product2.png', price: '$215', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '7', name: 'Main Kaye', image: 'img/product4.jpg', price: '$80', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '8', name: 'Angry Wape', image: 'img/product1.jpeg', price: '$100', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '9', name: 'Jewel Juice', image: 'img/product2.png', price: '$20', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '10', name: 'Island Man', image: 'img/product3.jpg', price: '$155', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '11', name: 'Roiwn Juice', image: 'img/product4.jpg', price: '$65', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },
-//   { id: '12', name: 'Old Morce', image: 'img/product3.jpg', price: '$525', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },  
-//   { id: '13', name: 'Pawn Juice', image: 'img/product4.jpg', price: '$215', description: 'Краткое описание жидкости для вейпа, Краткое описание жидкости для вейпа,Краткое описание жидкости для вейпа' },  
-// ];
-
 const mockProducts = (database.elfbarelfx).concat(database.cartriges);
 
 const App: React.FC = () => {
@@ -34,7 +18,9 @@ const App: React.FC = () => {
         if (window.Telegram?.WebApp) {
             const tg = window.Telegram.WebApp;
             tg.ready(); // Уведомляем Telegram, что приложение готово
-            tg.requestFullscreen();
+            window.Telegram.WebApp.platform !== 'tdesktop' ? tg.requestFullscreen() : null;
+            tg.disableVerticalSwipes();
+            tg.lockOrientation();
         } else {
             console.log("Запущено вне Telegram");
         }
@@ -51,7 +37,7 @@ const App: React.FC = () => {
         <Router>
             <div className="app">
                 <div className="app-container">
-                    {activeTab === 'home' && <Header onSearch={setSearchQuery} />}                                                    
+                    {activeTab === 'home' && <Header onSearch={setSearchQuery} />}                                           
                     <div className="main-content">
                         <Routes>
                             <Route
@@ -60,7 +46,7 @@ const App: React.FC = () => {
                             />
                             <Route
                                 path="/vapestore/product/:id"
-                                element={<ProductDetails baseQuantity={quantity} onQuantityChange={setQuantity} products={mockProducts} />}
+                                element={<ProductDetails onSearch={setSearchQuery} baseQuantity={quantity} onQuantityChange={setQuantity} products={mockProducts} onTabChange={setActiveTab}/>}
                             />
                         </Routes>
                     </div>
