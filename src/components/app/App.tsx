@@ -34,6 +34,7 @@ const App: React.FC = () => {
         if (window.Telegram?.WebApp) {
             const tg = window.Telegram.WebApp;
             tg.ready(); // Уведомляем Telegram, что приложение готово
+            tg.requestFullscreen();
         } else {
             console.log("Запущено вне Telegram");
         }
