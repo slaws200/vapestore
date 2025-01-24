@@ -38,7 +38,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
 
   return (
     <div className="product-details">
-      <div className="close" onClick={handleClick}>&#215;</div>
+      {/* <div className="close" onClick={handleClick}>&#215;</div> */}
       <img src={'/vapestore/' + product.image} alt={product.name} className="product-details-image" />
       <h1 className="product-details-name">{product.name}</h1>
       <p className="product-details-price">Цена: <span>{product.price} ₽ / {(Math.round((product.price * 1.05)/10)*10).toFixed(0)} lei</span></p>

@@ -1,7 +1,7 @@
 .product-details {
     position: relative;
     text-align: center;
-    margin: 40px;
+    margin: 10px;
   }
   
   .product-details-image {
@@ -79,8 +79,8 @@
   .product-add-to-cart {
     margin: 0 auto;
     margin-top: 10px;
-    /* position: sticky;
-    bottom: 0px; */
+    position: relative;
+    bottom: var(--tg-content-safe-area-inset-bottom);
     background-color: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     border-radius: 30px;
