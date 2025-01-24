@@ -9,7 +9,7 @@
   box-sizing: border-box;
   position: relative;
   top: var(--tg-content-safe-area-inset-top);
-  bottom: var(--tg-content-safe-area-inset-bottom);
+  bottom: calc(var(--tg-content-safe-area-inset-bottom) + 50px);
   right: var(--tg-content-safe-area-inset-right);
   left: var(--tg-content-safe-area-inset-left);
 }
