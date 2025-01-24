@@ -1,18 +1,13 @@
-.app {
-  box-sizing: border-box;
-  position: relative;
-  top: var(--tg-content-safe-area-inset-top);
-  bottom: var(--tg-content-safe-area-inset-bottom);
-  right: var(--tg-content-safe-area-inset-right);
-  left: var(--tg-content-safe-area-inset-left);
-  height: 100vh;
-}
+
 .app-container {
   position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding-bottom: calc(24px + var(--lvh, 100vh) - var(--tg-viewport-height, 100vh));
+  padding-top: calc(24px + var(--tg-safe-area-inset-top, 0px) + var(--tg-content-safe-area-inset-top, 0px));
 }
 
 .main-content {
