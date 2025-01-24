@@ -39,7 +39,7 @@ const App: React.FC = () => {
         <Router>
             <div className="app">
                 <div className="app-container">
-                    {activeTab === 'home' && <Header onSearch={setSearchQuery} />}                                           
+                    {/* {activeTab === 'home' && <Header onSearch={setSearchQuery} />}                                            */}
                     <div className="main-content">
                         <Routes>
                             <Route
@@ -52,7 +52,7 @@ const App: React.FC = () => {
                             />
                         </Routes>
                     </div>
-                    <BottomMenu activeTab={activeTab} onTabChange={setActiveTab} />
+                    {/* <BottomMenu activeTab={activeTab} onTabChange={setActiveTab} /> */}
                 </div>
             </div>
         </Router>
