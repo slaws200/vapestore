@@ -1,17 +1,18 @@
 .app {
   box-sizing: border-box;
   position: relative;
-}
-.app-container {
-  position: relative;
   top: var(--tg-content-safe-area-inset-top);
   bottom: var(--tg-content-safe-area-inset-bottom);
   right: var(--tg-content-safe-area-inset-right);
   left: var(--tg-content-safe-area-inset-left);
-  height: 97vh;
+  height: 100vh;
+}
+.app-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  height: 100%;
 }
 
 .main-content {
