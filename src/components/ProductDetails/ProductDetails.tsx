@@ -56,7 +56,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
         </div>
       </div> */}
       <div className="product-details-description">{product.description}</div>
-      <button className="product-add-to-cart">Добавить в корзину</button>
+      <button className="product-add-to-cart">Заказать товар</button>
     </div>
   );
 };

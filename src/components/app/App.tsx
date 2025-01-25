@@ -4,14 +4,13 @@ import React, { useState } from 'react';
 import Header from '@components/Header/Header';
 import ProductList from '@components/ProductList/ProductList';
 import BottomMenu from '@components/BottomMenu/BottomMenu';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, data } from 'react-router-dom';
 import ProductDetails from '@components/ProductDetails/ProductDetails';
 
 import database from '../../db.json';
 
 import './app.css';
-
-const mockProducts = (database.elfbarelfx).concat(database.cartriges);
+const mockProducts = database.cartriges.concat(database.elfbarelfx).concat(database.elfliq);
 
 const App: React.FC = () => {
 
