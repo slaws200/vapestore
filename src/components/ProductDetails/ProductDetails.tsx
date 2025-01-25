@@ -32,6 +32,48 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
     tg.BackButton.hide();
   }
 
+  const orderHandler = () => {
+    console.log('click');
+    if (!product) {
+      console.error("Продукт отсутствует, запрос не будет отправлен.");
+      return;
+    }
+  
+    console.log("Отправка запроса с данными:", product);
+  
+    const xhr = new XMLHttpRequest();
+  
+    // Открываем соединение (замените URL на ваш актуальный)
+    xhr.open("POST", "http://localhost:3005/sendHello", true);
+  
+    // Устанавливаем заголовок для JSON
+    xhr.setRequestHeader("Content-Type", "application/json");
+  
+    // Обработка ответа
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          try {
+            const response = JSON.parse(xhr.responseText);
+            if (response.success) {
+              console.log("Сообщение отправлено!");
+            } else {
+              console.error("Ошибка от сервера:", response.message);
+            }
+          } catch (error) {
+            console.error("Ошибка обработки ответа:", error);
+          }
+        } else {
+          console.error("Ошибка HTTP-запроса:", xhr.status, xhr.statusText);
+        }
+      }
+    };
+  
+    // Отправляем запрос с JSON-данными
+    xhr.send(JSON.stringify(product));
+  };
+  
+
   if (!product) {
     return <div>Product not found!</div>;
   }
@@ -56,7 +98,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
         </div>
       </div> */}
       <div className="product-details-description">{product.description}</div>
-      <button className="product-add-to-cart">Заказать товар</button>
+      <button className="product-add-to-cart" onClick={orderHandler}>Заказать товар</button>
     </div>
   );
 };
