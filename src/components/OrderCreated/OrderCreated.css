@@ -1,0 +1,84 @@
+.order {
+    margin-top: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    text-align: center;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: var(--tg-theme-text-color);
+    font-size: 20px;
+}
+
+.userID{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;    
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--tg-theme-accent-text-color);  
+}
+.userID span {
+    color: var(--tg-theme-hint-color);    
+    font-size: 12px;
+    font-weight: normal;
+}
+.checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .checkmark::after {
+    content: "";
+    width: 40px;
+    height: 20px;
+    border: 10px solid var(--tg-theme-accent-text-color);
+    border-radius: 15%;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+    animation: checkmark-animation 2s ease-out forwards 0.1s;
+  }
+
+  @keyframes checkmark-animation {
+    from {
+      opacity: 0;
+      transform: scale(0) rotate(-45deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) rotate(-45deg);
+    }
+  }
+
+  .toChat {
+    margin: 0 auto;
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+    border-radius: 10px;
+    height: 40px;
+    width: calc(100% - 20px);
+    font-size: 14px;
+    line-height: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: var(--tg-safe-area-inset-bottom, 24px);
+    left: 10px;
+  }

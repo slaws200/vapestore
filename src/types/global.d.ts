@@ -6,23 +6,23 @@ declare global {
       WebApp: {
         initData: string;
         initDataUnsafe: {
-          query_id?: string; // Уникальный идентификатор запроса
+          query_id?: string;
           user?: {
-            id: number; // Уникальный идентификатор пользователя
-            first_name: string; // Имя пользователя
-            last_name?: string; // Фамилия пользователя
-            username?: string; // Юзернейм пользователя
-            language_code?: string; // Код языка пользователя (например, "en" или "ru")
+            id: number;
+            first_name: string;
+            last_name?: string;
+            username?: string;
+            language_code?: string;
           };
           chat?: {
-            id: number; // Уникальный идентификатор чата
-            type: string; // Тип чата ("private", "group", "supergroup", "channel")
-            title?: string; // Название чата
-            username?: string; // Юзернейм чата
+            id: number;
+            type: string;
+            title?: string;
+            username?: string;
           };
-          can_send_after?: number; // UNIX timestamp, после которого можно отправлять сообщения от имени бота
-          auth_date: number; // UNIX timestamp, когда пользователь был авторизован
-          hash: string; // Подпись данных для проверки подлинности
+          can_send_after?: number;
+          auth_date: number;
+          hash: string;
         };
         version: string;
         platform: string;
@@ -38,9 +38,9 @@ declare global {
         colorScheme: 'light' | 'dark';
         viewportHeight: number;
         isExpanded: boolean;
-        ready: () => void; // Добавляем метод ready
+        ready: () => void;
         expand: () => void;
-        close: () => void;        
+        close: () => void;
         requestFullscreen: () => void;
         disableVerticalSwipes: () => void;
         lockOrientation: () => void;
@@ -59,6 +59,28 @@ declare global {
           onClick: (callback: () => void) => void;
           offClick: (callback: () => void) => void;
         };
+        PopupButton: {
+          id: string;
+          type: 'default' | 'destructive' | 'ok' | 'cancel';
+          text: string;
+        };
+        openTelegramLink: (url: string) => void;
+
+        /** 🔹 Показывает простое уведомление (alert) */
+        showAlert: (message: string, callback?: () => void) => void;
+
+        /** 🔹 Показывает подтверждающее окно с "OK" и "Cancel" */
+        showConfirm: (message: string, callback: (confirmed: boolean) => void) => void;
+
+        /** 🔹 Показывает кастомный popup с кнопками */
+        showPopup: (
+          popupParams: {
+            title?: string;
+            message: string;
+            buttons: { id: string; type: 'default' | 'destructive' | 'ok' | 'cancel'; text: string }[];
+          },
+          callback: (buttonId: string) => void
+        ) => void;
       };
     };
   }

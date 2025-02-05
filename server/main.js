@@ -34,7 +34,7 @@ app.post("/sendHello", async (req, res) => {
     return res.status(400).send({ success: false, message: "Некорректное тело запроса." });
   }
   try {
-    await bot.api.sendMessage("-1002277090632", `Привет! В приложении оформили заказ ${data.name} на сумму ${data.price} рублей. ID заказа ${data.id}`, {parse_mode: 'HTML'});
+    await bot.api.sendMessage("-1002277090632", `Привет! В приложении оформили заказ ${data.name} на сумму ${data.price} рублей. ID заказа ${data.id}. ${data.username ? 'Пользователь: @' + data.username : ''}`, {parse_mode: 'HTML'});
     res.status(200).send({ success: true, message: "Сообщение отправлено!" });
   } catch (error) {
     console.error(error);

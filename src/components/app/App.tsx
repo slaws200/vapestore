@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import React, { useState } from 'react';
 import Header from '@components/Header/Header';
 import ProductList from '@components/ProductList/ProductList';
+import OrderCreated from '@components/OrderCreated/OrderCreated';
 import BottomMenu from '@components/BottomMenu/BottomMenu';
 import { BrowserRouter as Router, Routes, Route, data } from 'react-router-dom';
 import ProductDetails from '@components/ProductDetails/ProductDetails';
@@ -28,7 +29,6 @@ const App: React.FC = () => {
     
     const [activeTab, setActiveTab] = useState('home');
     const [searchQuery, setSearchQuery] = useState('');
-    const [quantity, setQuantity] = useState(1);
 
     const filteredProducts = mockProducts.filter((product) =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -47,7 +47,11 @@ const App: React.FC = () => {
                             />
                             <Route
                                 path="/vapestore/product/:id"
-                                element={<ProductDetails onSearch={setSearchQuery} baseQuantity={quantity} onQuantityChange={setQuantity} products={mockProducts} onTabChange={setActiveTab}/>}
+                                element={<ProductDetails onSearch={setSearchQuery} products={mockProducts} onTabChange={setActiveTab}/>}
+                            />
+                            <Route
+                                path="/orderCreated"
+                                element={<OrderCreated onTabChange={setActiveTab} onSearch={setSearchQuery}/>}
                             />
                         </Routes>
                     </div>

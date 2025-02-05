@@ -5,13 +5,11 @@ import { Products } from '@interfaces/Products';
 import './ProductDetails.css';
 
 interface ProductDetailsProps extends Products{
-  onQuantityChange: (query: number) => void;
-  baseQuantity: number;
   onTabChange: (activeTab: string) => void;
   onSearch: (query: string) => void;
 }
 
-const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity, onQuantityChange, onTabChange, onSearch }) => {
+const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, onSearch }) => {
   useEffect(() => {    
     onTabChange('');
     tg.BackButton.show();
@@ -27,7 +25,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
 
   const handleClick = () => {
     navigate("/vapestore/");
-    onQuantityChange(1);
     onTabChange('home');
     onSearch(''); 
     tg.BackButton.hide();
@@ -37,14 +34,16 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
     if (!product) {
       console.error("Продукт отсутствует, запрос не будет отправлен.");
       return;
-    }  
+    } 
+    navigate("/orderCreated/");
 
     const reqBody = {
       ...product,
-      id: userData.user?.id
-    }
+      id: userData.user?.id,
+      username: userData.user?.username
+    };
 
-    fetch("https://e03f-80-94-250-110.ngrok-free.app/sendHello", {
+    fetch("https://9e15-80-94-250-110.ngrok-free.app/sendHello", {
       method: "POST",
       headers: {
         "Content-Type": 'application/json',
@@ -66,7 +65,20 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, baseQuantity,
       <h1 className="product-details-name">{product.name}</h1>
       <p className="product-details-price">Цена: <span>{product.price} ₽ / {(Math.round((product.price * 1.09)/10)*10).toFixed(0)} lei</span></p>
       <div className="product-details-description">{product.description}</div>
-      <button className="product-add-to-cart" onClick={() => {orderHandler()}}>Заказать товар</button>
+      <button className="product-add-to-cart" onClick={() => {
+        tg.showPopup({
+          title: "Подтверждение",
+          message: "Оформить заказ?",
+          buttons: [
+              { id: "yes", type: "default", text: "Подтвердить" },
+              { id: "no", type: "destructive", text: "Отменить" }
+          ]
+          }, (buttonId) => {
+              if(buttonId === 'yes'){
+                orderHandler();
+              }
+          });
+      }}>Заказать товар</button>
     </div>
   );
 };
