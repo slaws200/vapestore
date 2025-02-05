@@ -43,7 +43,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, 
       username: userData.user?.username
     };
 
-    fetch("https://9e15-80-94-250-110.ngrok-free.app/sendHello", {
+    fetch("https://mybot-pmod.onrender.com/sendHello", {
       method: "POST",
       headers: {
         "Content-Type": 'application/json',
