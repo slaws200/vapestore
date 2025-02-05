@@ -5,7 +5,25 @@ declare global {
     Telegram: {
       WebApp: {
         initData: string;
-        initDataUnsafe: Record<string, unknown>;
+        initDataUnsafe: {
+          query_id?: string; // Уникальный идентификатор запроса
+          user?: {
+            id: number; // Уникальный идентификатор пользователя
+            first_name: string; // Имя пользователя
+            last_name?: string; // Фамилия пользователя
+            username?: string; // Юзернейм пользователя
+            language_code?: string; // Код языка пользователя (например, "en" или "ru")
+          };
+          chat?: {
+            id: number; // Уникальный идентификатор чата
+            type: string; // Тип чата ("private", "group", "supergroup", "channel")
+            title?: string; // Название чата
+            username?: string; // Юзернейм чата
+          };
+          can_send_after?: number; // UNIX timestamp, после которого можно отправлять сообщения от имени бота
+          auth_date: number; // UNIX timestamp, когда пользователь был авторизован
+          hash: string; // Подпись данных для проверки подлинности
+        };
         version: string;
         platform: string;
         themeParams: {

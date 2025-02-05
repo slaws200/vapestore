@@ -1,15 +1,15 @@
 const { Bot } = require("grammy");
 const express = require("express");
+const bodyParser = require('body-parser');
 require("dotenv").config();
+const cors = require("cors");
 
 const bot = new Bot(process.env.API_KEY_BOT);
 
 // Команда /start
 bot.command("start", (ctx) =>
   ctx.reply(
-    `Приветствую${
-      ctx.chat.username ? ", @" + ctx.chat.username : ", " + ctx.chat.first_name
-    }! Ты попал в магазин жидкостей для вейпа LIQUID  LOUNGE 😎, наша официальная группа - https://t.me/LiquidLoungevk, подписывайся и следи за обновлениями!`
+    `Приветствую<b>${ctx.chat.username ? ", @" + ctx.chat.username : ", " + ctx.chat.first_name}</b>! Ты попал в магазин жидкостей для вейпа <b>LIQUID  LOUNGE</b> 😎, наша официальная группа - https://t.me/LiquidLoungevk, подписывайся и следи за обновлениями!`, {parse_mode: 'HTML'}
   )
 );
 
@@ -21,17 +21,20 @@ const app = express();
 const PORT = process.env.PORT || 3005;
 
 // Включаем парсинг JSON в запросах
-app.use(express.json());
+app.use(bodyParser.json());
+
+app.use(cors());
+app.options("*", cors());
+
 
 // Эндпоинт для вызова sendHello()
 app.post("/sendHello", async (req, res) => {
+  const data = req.body;
+  if (!data || !data.name || !data.price) {
+    return res.status(400).send({ success: false, message: "Некорректное тело запроса." });
+  }
   try {
-    await bot.api.sendMessage({
-      chat_id: -1002277090632, // Укажите свой чат ID
-      text: `<i>Привет! В приложении оформили заказ ${req.name} на сумму ${req.price} рублей</i>`,
-      parse_mode: "HTML",
-    });
-    console.log('done');
+    await bot.api.sendMessage("-1002277090632", `Привет! В приложении оформили заказ ${data.name} на сумму ${data.price} рублей. ID заказа ${data.id}`, {parse_mode: 'HTML'});
     res.status(200).send({ success: true, message: "Сообщение отправлено!" });
   } catch (error) {
     console.error(error);
