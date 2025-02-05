@@ -1,7 +1,7 @@
 /* src/styles/Header.css */
 .header {
     position: relative;
-    top: var(--tg-content-safe-area-inset-top);
+    top: 0;
     z-index: 2;
     padding: 0px 12px;
     margin: 0 auto;

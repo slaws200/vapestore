@@ -8,7 +8,7 @@ interface OrderCreatedProps{
 
 const OrderCreated: React.FC<OrderCreatedProps> = () => {
   const handleClick = () => {
-    window.Telegram.WebApp.openTelegramLink('https://t.me/LiquidLoungevk');
+    window.Telegram.WebApp.openTelegramLink('https://t.me/Liquid_Lounge');
   }
 
   return (
