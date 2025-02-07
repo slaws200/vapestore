@@ -9,6 +9,10 @@
     height: 240px;
     border-radius: 10px;
   }
+
+  .avaliable {
+    color: red;
+  }
   
   .product-details-name {
     color: var(--tg-theme-text-color);

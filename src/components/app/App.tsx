@@ -11,7 +11,7 @@ import ProductDetails from '@components/ProductDetails/ProductDetails';
 import database from '../../db.json';
 
 import './app.css';
-const mockProducts = database.cartriges.concat(database.elfbarelfx).concat(database.elfliq);
+const mockProducts = database.cartriges.concat(database.elfbarelfx).concat(database.elfliq).concat(database.chaser).concat(database.octobar).concat(database.vozol);
 
 const App: React.FC = () => {
 
