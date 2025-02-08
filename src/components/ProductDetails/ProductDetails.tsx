@@ -14,7 +14,27 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, 
     onTabChange('');
     tg.BackButton.show();
     tg.BackButton.onClick(handleClick);
+    
+    const fetchData = async () => {
+        try {
+            const response = await fetch("https://mybot-pmod.onrender.com/"); // Замените на ваш URL
+            const data = await response.json();
+            console.log('Данные получены:', data);
+        } catch (error) {
+            console.error('Ошибка при запросе:', error);
+        }
+    };
+
+    // Выполняем запрос сразу при монтировании компонента
+    fetchData();
+
+    // Устанавливаем интервал для выполнения запроса каждые 29 минут
+    const interval = setInterval(fetchData, 29 * 60 * 1000); // 29 минут в миллисекундах
+
+    // Очищаем интервал при размонтировании компонента
+    return () => clearInterval(interval);
   }, []);
+  
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
