@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IoIosSearch } from "react-icons/io";
 import './Header.css';
 
 interface HeaderProps {
@@ -21,6 +22,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
 
   return (
     <header className="header">
+      <IoIosSearch fill={'#999999'} />
       <input
         type="text"
         className="search-bar"

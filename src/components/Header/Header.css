@@ -7,9 +7,9 @@
     margin: 0 auto;
     background-color: var(--tg-theme-header-bg-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 50px;
     height: 40px;
-    width: calc(100% - var(--tg-content-safe-area-inset-left) - var(--tg-content-safe-area-inset-right));
+    width: calc(90% - var(--tg-content-safe-area-inset-left) - var(--tg-content-safe-area-inset-right) );
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,7 +22,7 @@
     background-color: var(--tg-theme-header-bg-color);
     height: 40px;
     width: calc(100% - 24px);
-    padding: 0px 12px;
+    padding: 0px 4px;
     border: none;
     font-size: 14px;
     outline: none;

@@ -1,0 +1,43 @@
+.tabs-wrapper {
+    position: relative;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto; /* Позволяет горизонтальный скролл */
+    white-space: nowrap; /* Не дает табам переноситься */
+    scrollbar-width: none; /* Убираем стандартный скролл в Firefox */
+    -webkit-overflow-scrolling: touch; /* Улучшает плавность прокрутки в iOS */
+    gap: 5px; /* Промежутки между табами */
+    scroll-behavior: smooth; /* Плавный скролл */
+    background-color: transparent;
+}
+
+.tabs-wrapper::-webkit-scrollbar {
+    display: none; /* Убираем скролл в Chrome/Safari */
+}
+
+.tab {
+    color: var(--tg-theme-button-text-color);
+    flex: 0 0 70px; /* Фиксированная ширина таба */
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tg-theme-button-color);
+    border-radius: 50px;
+    transition: all 0.1s ease, transform 0.2s ease;
+}
+
+.tab:active {
+    transform: scale(0.95);
+}
+
+.tab.active {
+    border: 2px solid var(--tg-theme-button-color);
+    font-weight: bold;
+    text-shadow: 0px 0px 10px var(--tg-theme-button-color);
+}

@@ -43,6 +43,9 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, 
       username: userData.user?.username,
     };
   
+    // Переход на страницу подтверждения заказа
+    navigate("/orderCreated/");
+  
     try {
       const response = await fetch("https://mybot-pmod.onrender.com/sendHello", {
         method: "POST",
@@ -59,9 +62,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, 
   
       const data = await response.json(); // Обрабатываем JSON-ответ
       console.log("Ответ от сервера:", data);
-  
-      // Переход на страницу подтверждения заказа
-      navigate("/orderCreated/");
     } catch (error) {
       console.error("Ошибка при отправке запроса:", error);
       // Можно добавить уведомление пользователю об ошибке
