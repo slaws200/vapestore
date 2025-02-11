@@ -38,6 +38,5 @@
 
 .tab.active {
     border: 2px solid var(--tg-theme-button-color);
-    font-weight: bold;
-    text-shadow: 0px 0px 10px var(--tg-theme-button-color);
+    text-shadow: 0px 0px 10px white;
 }

@@ -14,8 +14,8 @@ const OrderCreated: React.FC<OrderCreatedProps> = () => {
   return (
     <div className="order">
         <div className="checkmark"></div>
-        <div className="text">Остался всего 1 шаг! <br /> <br />
-                              Для оформления заказа перейдите в чат с администратором и сообщите ему свой ID.
+        <div className="text">Спасибо за заказ! <br /> <br />
+                              Чтобы завершить перейдите пожалуйста в чат с администратором и сообщите ему свой ID.
         </div>
         <div className="userID" onClick={() => {
             navigator.clipboard.writeText(`${window.Telegram.WebApp.initDataUnsafe.user?.id}`).then(() => {

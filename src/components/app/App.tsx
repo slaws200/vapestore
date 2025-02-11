@@ -29,6 +29,12 @@ const App: React.FC = () => {
             window.Telegram.WebApp.platform !== 'tdesktop' ? tg.requestFullscreen() : null;
             tg.disableVerticalSwipes();
             tg.lockOrientation();
+
+            try {
+              fetch("https://mybot-pmod.onrender.com/", { method: "GET" });
+            } catch (error) {
+              console.error("Ошибка при разбудке сервера:", error);
+            }
         } else {
             console.log("Запущено вне Telegram");
         }
