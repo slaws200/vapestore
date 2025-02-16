@@ -79,7 +79,9 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, 
 
   return (
     <div className="product-details">
-      <div className="avaliable">*Наличие товара уточняйте у администратора</div>
+      <div className="avaliable-wrapper">
+        <div className="avaliable"><span>Наличи</span>е товара ут<span>очняйт</span>е у админи<span>страто</span>ра</div>
+      </div>
       <img src={'/vapestore/' + product.image} alt={product.name} className="product-details-image" />
       <h1 className="product-details-name">{product.name}</h1>
       <p className="product-details-price">Цена: <span>{product.price} ₽ / {(Math.round((product.price * 1.09)/10)*10).toFixed(0)} lei</span></p>
