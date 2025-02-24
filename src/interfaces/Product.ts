@@ -5,5 +5,6 @@ export interface Product {
     price: number;
     description?: string; // Описание может быть необязательным
     count?: number;
+    available: boolean
   }
   

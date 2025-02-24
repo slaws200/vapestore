@@ -24,6 +24,13 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, 
   const tg = window.Telegram.WebApp;
   const userData = tg.initDataUnsafe;
 
+  const handleAvaliable = () => {
+    if(product){
+      product.available = !product.available;
+      tg.showAlert("Состояние изменено.")
+    }
+  }
+
 
   const handleClick = () => {
     navigate("/vapestore/");
@@ -84,6 +91,10 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, 
       </div>
       <img src={'/vapestore/' + product.image} alt={product.name} className="product-details-image" />
       <h1 className="product-details-name">{product.name}</h1>
+        {userData.user?.id == 2200275865 ? 
+          <div className="avaliable-buttons-wrapper">
+            <div className="handleAvailable" onClick={handleAvaliable}>{product.available ? 'Скрыть':'Показать'}</div>
+          </div> : null}
       <p className="product-details-price">Цена: <span>{product.price} ₽ / {(Math.round((product.price * 1.09)/10)*10).toFixed(0)} lei</span></p>
       <div className="product-details-description">{product.description}</div>
       {loading ? (

@@ -181,3 +181,19 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+  .avaliable-buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    color: var(--tg-theme-button-text-color);
+  }
+  .handleAvailable {
+    display: block;
+    padding: 2px;
+    margin: 5px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--tg-theme-button-color);
+    border-radius: 4px;
+  }
