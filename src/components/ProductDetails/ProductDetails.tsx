@@ -91,7 +91,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, onTabChange, 
       </div>
       <img src={'/vapestore/' + product.image} alt={product.name} className="product-details-image" />
       <h1 className="product-details-name">{product.name}</h1>
-        {userData.user?.id == 2200275865 ? 
+        {userData.user?.id == 790578256 || 1588720592 ? 
           <div className="avaliable-buttons-wrapper">
             <div className="handleAvailable" onClick={handleAvaliable}>{product.available ? 'Скрыть':'Показать'}</div>
           </div> : null}
