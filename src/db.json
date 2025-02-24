@@ -7,7 +7,7 @@
       "description": "Совместимые продукты: Minican 2, Minican+,  Minican, Minican 3, Minican 3 Pro, Minican 4",
       "image": "img/minicancartrige.webp",
       "stock": 50,
-      "available": false
+      "available": true
     },
     {
       "id": "2",
