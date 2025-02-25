@@ -6,7 +6,7 @@ import './ProductList.css';
 
 const ProductList: React.FC<Products> = ({ products }) => {
   const navigate = useNavigate();
-  const filteredProducts = window.Telegram.WebApp.initDataUnsafe.user?.id == 790578256 ? products : products.filter(product => product.available);
+  const filteredProducts = window.Telegram.WebApp.initDataUnsafe.user?.id == 7 ? products : products.filter(product => product.available);
   return (
     <div className="product-list">
       {filteredProducts.map((product) => (
