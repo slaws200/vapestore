@@ -8,9 +8,7 @@
   overflow: hidden;
   padding-bottom: calc(var(--lvh, 100vh) - var(--tg-viewport-height, 100vh));
   padding-top: calc(var(--tg-safe-area-inset-top, 0px) + var(--tg-content-safe-area-inset-top, 0px));
-  background: url("/img/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: no-repeat center/100% url("/img/bg.png");
 }
 
 .main-content {
