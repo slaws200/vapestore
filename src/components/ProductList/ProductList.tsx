@@ -6,7 +6,10 @@ import './ProductList.css';
 
 const ProductList: React.FC<Products> = ({ products }) => {
   const navigate = useNavigate();
-  const filteredProducts = window.Telegram.WebApp.initDataUnsafe.user?.id == 7 ? products : products.filter(product => product.available);
+  const filteredProducts = window.Telegram.WebApp.initDataUnsafe.user?.id == 7 ? 
+    products
+    : 
+    products.filter(product => product.available);
   return (
     <div className="product-list">
       {filteredProducts.map((product) => (
@@ -18,7 +21,7 @@ const ProductList: React.FC<Products> = ({ products }) => {
           <img src={product.image} alt={product.name} className="product-image" />
           <div className="product-info">
             <span className="product-name">{product.name}</span>
-            {product.available === false ? 'Скрыто' : <div className="product-name-price-wrapper">
+            {!product.available ? 'Скрыто' : <div className="product-name-price-wrapper">
               <span>Цена: </span>
               <span className="product-price">{product.price} ₽</span>
             </div>}
