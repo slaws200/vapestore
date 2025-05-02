@@ -37,10 +37,17 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
   };
 
   const handleClick = () => {
-    navigate(-1);
-    onTabChange("home");
-    onSearch("");
-    tg.BackButton.hide();
+    if (location.pathname.includes("/orderCreated")) {
+      navigate(-2);
+      onTabChange("home");
+      onSearch("");
+      tg.BackButton.hide();
+    } else {
+      navigate(-1);
+      onTabChange("home");
+      onSearch("");
+      tg.BackButton.hide();
+    }
   };
 
   const orderHandler = async () => {
